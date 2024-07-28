@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWatch</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video de Fondo -->
+    <div class="video-background">
+        <video id="backgroundVideo" autoplay loop muted>
+            <source src="./assets/video/default.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center text-light p-5" id="left-side">
+                <h1 class="display-4 mb-4">WeatherWatch</h1>
+                <div id="weatherInfo" class="text-center">
+                    <h2 class="display-4"><span id="temperature"></span></h2>
+                    <h3 id="cityName"></h3>
+                    <p id="currentDate"></p>
+                </div>
+            </div>
+
+            
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-5" id="right-side">
+                <div class="weather-form bg-dark p-4 rounded">
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" id="city" placeholder="Introduce una ciudad">
+                        <div class="input-group-append">
+                            <button id="getWeather" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div id="weatherData" class="weather-data mt-4 text-light"></div>
+                    <div id="popularCities" class="mt-4">
+                        <h5 class="text-light">Popular Cities</h5>
+                        <div class="btn-group-vertical w-100">
+                            <button class="btn btn-secondary city-btn" data-city="Madrid"><i class="fas fa-landmark"></i> Madrid</button>
+                            <button class="btn btn-secondary city-btn" data-city="London" ><i class="fas fa-clock"></i> London</button>
+                            <button class="btn btn-secondary city-btn" data-city="Bangkok"><i class="fas fa-archway"></i> Bangkok</button>
+                            <button class="btn btn-secondary city-btn" data-city="Tokyo"><i class="fas fa-torii-gate"></i> Tokyo</button>
+                            <button class="btn btn-secondary city-btn" data-city="Sydney"><i class="fas fa-water"></i> Sydney</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Created by Daniel Soto using the OpenWeather API</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

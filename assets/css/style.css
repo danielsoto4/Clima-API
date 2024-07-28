@@ -1,0 +1,80 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    height: auto;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+#left-side {
+    backdrop-filter: blur(0);
+}
+
+#right-side {
+    backdrop-filter: blur(5px);
+}
+
+.weather-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input-group .form-control {
+    border-radius: 100px;
+    border: none;
+}
+
+.input-group .btn {
+    border-radius: 0;
+}
+
+.weather h2, .weather p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.weather-data {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.titlel{
+    color: rgb(255, 255, 255);
+    font-size: bold;
+}
+
+.footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
